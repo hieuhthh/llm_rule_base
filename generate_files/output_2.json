@@ -1,0 +1,33 @@
+{
+    "question": "Is the Earth flat?",
+    "llm_generate": {
+        "logical_statements": [
+            "A. If the Earth is flat, then ships disappear hull first over the horizon.",
+            "B. Ships disappear hull first over the horizon.",
+            "C. If the Earth is flat, then circumnavigation is impossible.",
+            "D. Circumnavigation is possible.",
+            "E. If the Earth is flat, then different constellations would not be visible from different latitudes.",
+            "F. Different constellations are visible from different latitudes.",
+            "G. The Earth is not flat."
+        ],
+        "rule_representation": [
+            "B",
+            "D",
+            "F",
+            "A → ¬G",
+            "C → ¬G",
+            "E → ¬G",
+            "B ∧ D ∧ F"
+        ],
+        "answer_logical_statement": "G"
+    },
+    "solve_steps": [
+        "B = True",
+        "D = True",
+        "F = True",
+        "Skipping axiom 'B ∧ D ∧ F': Conclusion must be a literal (atom or its negation)",
+        "End."
+    ],
+    "result": "'G' is False.",
+    "final_conclusion": "The statement 'The Earth is not flat.' is False."
+}

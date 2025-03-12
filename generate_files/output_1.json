@@ -1,0 +1,31 @@
+{
+    "question": "Is Hồ Chí Minh city the capital of Vietnam?",
+    "llm_generate": {
+        "logical_statements": [
+            "A. Hanoi is the capital of Vietnam.",
+            "B. Hồ Chí Minh City is the largest city in Vietnam.",
+            "C. A city can only be the capital of a country if it is designated as such.",
+            "D. Only one city can be the capital of a country.",
+            "E. If Hanoi is the capital of Vietnam, then Hồ Chí Minh City is not the capital of Vietnam.",
+            "F. Hanoi is designated as the capital of Vietnam.",
+            "G. Hồ Chí Minh City is the capital of Vietnam."
+        ],
+        "rule_representation": [
+            "A",
+            "A → E",
+            "E → ¬G",
+            "F → A",
+            "F"
+        ],
+        "answer_logical_statement": "G"
+    },
+    "solve_steps": [
+        "A = True",
+        "F = True",
+        "'A → E' so E = True",
+        "'E → ¬G' so G = False",
+        "End."
+    ],
+    "result": "'G' is False.",
+    "final_conclusion": "The statement 'Hồ Chí Minh City is the capital of Vietnam.' is False."
+}

@@ -1,0 +1,30 @@
+{
+    "question": "Check if the following statement is true: \"Number 16 is an odd number.\"",
+    "llm_generate": {
+        "logical_statements": [
+            "A. 16 is an integer.",
+            "B. An odd number is an integer that is not divisible by 2.",
+            "C. 16 is divisible by 2.",
+            "D. If a number is divisible by 2, then it is not an odd number.",
+            "E. 16 is not an odd number."
+        ],
+        "rule_representation": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "C ∧ D → E"
+        ],
+        "answer_logical_statement": "E"
+    },
+    "solve_steps": [
+        "A = True",
+        "B = True",
+        "C = True",
+        "D = True",
+        "'C ∧ D → E' so E = True",
+        "End."
+    ],
+    "result": "'E' is True.",
+    "final_conclusion": "The statement '16 is not an odd number.' is True."
+}

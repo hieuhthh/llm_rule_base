@@ -1,0 +1,33 @@
+{
+    "question": "Proof that Vietnam is in Southeast Asia.",
+    "llm_generate": {
+        "logical_statements": [
+            "A. Southeast Asia is a defined geographical region.",
+            "B. Vietnam is a country.",
+            "C. Vietnam is located in the Indochinese Peninsula.",
+            "D. The Indochinese Peninsula is part of Southeast Asia.",
+            "E. If a country is part of a region, then it is in that region.",
+            "F. Therefore, Vietnam is in Southeast Asia."
+        ],
+        "rule_representation": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "C ∧ D → F"
+        ],
+        "answer_logical_statement": "F"
+    },
+    "solve_steps": [
+        "A = True",
+        "B = True",
+        "C = True",
+        "D = True",
+        "E = True",
+        "'C ∧ D → F' so F = True",
+        "End."
+    ],
+    "result": "'F' is True.",
+    "final_conclusion": "The statement 'Therefore, Vietnam is in Southeast Asia.' is True."
+}

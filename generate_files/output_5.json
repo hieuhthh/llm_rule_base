@@ -1,0 +1,33 @@
+{
+    "question": "Is 15 a prime number?",
+    "llm_generate": {
+        "logical_statements": [
+            "A. A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself.",
+            "B. 15 is a natural number greater than 1.",
+            "C. 15 is divisible by 3.",
+            "D. 15 is divisible by 5.",
+            "E. If a number is divisible by a number other than 1 and itself, then it is not a prime number.",
+            "F. 15 is not a prime number."
+        ],
+        "rule_representation": [
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "B ∧ C ∧ E → F"
+        ],
+        "answer_logical_statement": "F"
+    },
+    "solve_steps": [
+        "A = True",
+        "B = True",
+        "C = True",
+        "D = True",
+        "E = True",
+        "'B ∧ C ∧ E → F' so F = True",
+        "End."
+    ],
+    "result": "'F' is True.",
+    "final_conclusion": "The statement '15 is not a prime number.' is True."
+}
