@@ -1,39 +1,30 @@
 {
-    "question": "Can humans breathe underwater?",
+    "question": "Check if the following statement is true: \"Number 16 is an odd number.\"",
     "llm_generate": {
         "logical_statements": [
-            "A. Humans require oxygen to survive.",
-            "B. The concentration of oxygen in water is significantly lower than in air.",
-            "C. Human lungs are designed to extract oxygen from air, not water.",
-            "D. Human lungs would fill with water if submerged without protection.",
-            "E. Filling the lungs with water prevents oxygen absorption.",
-            "F. Insufficient oxygen intake leads to suffocation.",
-            "G. Therefore, humans cannot breathe underwater without assistance.",
-            "H. Assistance can include specialized equipment like scuba gear."
+            "A. 16 is an integer.",
+            "B. An odd number is an integer that is not divisible by 2.",
+            "C. 16 is divisible by 2.",
+            "D. If a number is divisible by 2, then it is not an odd number.",
+            "E. 16 is not an odd number."
         ],
         "rule_representation": [
             "A",
             "B",
             "C",
             "D",
-            "E",
-            "F",
-            "A ∧ B ∧ C ∧ D ∧ E ∧ F → G",
-            "G ∨ H"
+            "C ∧ D → E"
         ],
-        "answer_logical_statement": "G"
+        "answer_logical_statement": "E"
     },
     "solve_steps": [
         "A = True",
         "B = True",
         "C = True",
         "D = True",
-        "E = True",
-        "F = True",
-        "Skipping axiom 'G ∨ H': Conclusion must be a literal (atom or its negation)",
-        "'A ∧ B ∧ C ∧ D ∧ E ∧ F → G' so G = True",
+        "'C ∧ D → E' so E = True",
         "End."
     ],
-    "result": "'G' is True.",
-    "final_conclusion": "The statement 'Therefore, humans cannot breathe underwater without assistance.' is True."
+    "result": "'E' is True.",
+    "final_conclusion": "The statement '16 is not an odd number.' is True."
 }

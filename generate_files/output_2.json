@@ -1,33 +1,39 @@
 {
-    "question": "Is the Earth flat?",
+    "question": "Can humans breathe underwater?",
     "llm_generate": {
         "logical_statements": [
-            "A. If the Earth is flat, then ships disappear hull first over the horizon.",
-            "B. Ships disappear hull first over the horizon.",
-            "C. If the Earth is flat, then circumnavigation is impossible.",
-            "D. Circumnavigation is possible.",
-            "E. If the Earth is flat, then different constellations would not be visible from different latitudes.",
-            "F. Different constellations are visible from different latitudes.",
-            "G. The Earth is not flat."
+            "A. Humans require oxygen to survive.",
+            "B. The concentration of oxygen in water is significantly lower than in air.",
+            "C. Human lungs are designed to extract oxygen from air, not water.",
+            "D. Human lungs would fill with water if submerged without protection.",
+            "E. Filling the lungs with water prevents oxygen absorption.",
+            "F. Insufficient oxygen intake leads to suffocation.",
+            "G. Therefore, humans cannot breathe underwater without assistance.",
+            "H. Assistance can include specialized equipment like scuba gear."
         ],
         "rule_representation": [
+            "A",
             "B",
+            "C",
             "D",
+            "E",
             "F",
-            "A → ¬G",
-            "C → ¬G",
-            "E → ¬G",
-            "B ∧ D ∧ F"
+            "A ∧ B ∧ C ∧ D ∧ E ∧ F → G",
+            "G ∨ H"
         ],
         "answer_logical_statement": "G"
     },
     "solve_steps": [
+        "A = True",
         "B = True",
+        "C = True",
         "D = True",
+        "E = True",
         "F = True",
-        "Skipping axiom 'B ∧ D ∧ F': Conclusion must be a literal (atom or its negation)",
+        "Skipping axiom 'G ∨ H': Conclusion must be a literal (atom or its negation)",
+        "'A ∧ B ∧ C ∧ D ∧ E ∧ F → G' so G = True",
         "End."
     ],
-    "result": "'G' is False.",
-    "final_conclusion": "The statement 'The Earth is not flat.' is False."
+    "result": "'G' is True.",
+    "final_conclusion": "The statement 'Therefore, humans cannot breathe underwater without assistance.' is True."
 }

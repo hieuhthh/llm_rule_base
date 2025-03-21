@@ -6,19 +6,18 @@ from llm_rule_base import generate_json_rule_base
 from solve import solve_rule_base
 
 out_route = 'generate_files'
-# shutil.rmtree(out_route, ignore_errors=True)
+shutil.rmtree(out_route, ignore_errors=True)
 os.makedirs(out_route, exist_ok=True)
 
 questions = [
     'Proof that Vietnam is in Southeast Asia.',
     'Is Hồ Chí Minh city the capital of Vietnam?',
-    'Is the Earth flat?',
     'Can humans breathe underwater?',
     'Check if the following statement is true: "Number 16 is an odd number."',
     'Is 15 a prime number?',
 ]
 
-skip_list = [0]
+skip_list = []
 
 for i, question in enumerate(questions):
     if i in skip_list:
