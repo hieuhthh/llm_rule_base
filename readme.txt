@@ -1,3 +1,7 @@
+INFORMATION:
+24C15033 - NGUYỄN MẬU TRỌNG HIẾU
+24C15054 - PHÙ THỊ KIM TRANG
+
 1. Create a conda environment:
 conda create -n llm_rb python=3.10.0 -y
 conda activate llm_rb
